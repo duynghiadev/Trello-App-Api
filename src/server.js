@@ -1,5 +1,5 @@
 import express from "express";
-import { mapOrder } from "./utilities/sorts.js";
+import { mapOrder } from "*/utilities/sorts.js";
 
 const app = express();
 
@@ -11,5 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, hostname, () => {
-  console.log(`Hello DuyNghiaDev, I'm running at ${hostname}:${port}/`);
+  console.log(
+    `Hello Everyone DuyNghiaDev, I'm running at ${hostname}:${port}/`
+  );
 });
