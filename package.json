@@ -1,0 +1,24 @@
+{
+  "name": "trello-app-api",
+  "version": "1.0.0",
+  "description": "APIs for Trello Clone App",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duynghia-123/Trello-App-Api.git"
+  },
+  "keywords": [],
+  "author": "DuyNghia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duynghia-123/Trello-App-Api/issues"
+  },
+  "homepage": "https://github.com/duynghia-123/Trello-App-Api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
