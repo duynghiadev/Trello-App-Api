@@ -11,7 +11,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, hostname, () => {
-  console.log(
-    `Hello Everyone DuyNghiaDev, I'm running at ${hostname}:${port}/`
-  );
+  console.log(`Hello Everyone, I'm running at ${hostname}:${port}/`);
 });
