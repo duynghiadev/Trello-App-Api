@@ -1,6 +1,8 @@
 import express from "express";
 import { HttpStatusCode } from "../../utilities/constants";
 import { boardRoutes } from "./board.route";
+import { cardRoutes } from "./card.route";
+import { columnRoutes } from "./column.route";
 
 const router = express.Router();
 
@@ -15,7 +17,16 @@ router.get("/status", (req, res) =>
 /**
  * Board APIs
  */
-
 router.use("/boards", boardRoutes);
+
+/**
+ * Column APIs
+ */
+router.use("/columns", columnRoutes);
+
+/**
+ * Card APIs
+ */
+router.use("/cards", cardRoutes);
 
 export const apiV1 = router;
