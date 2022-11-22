@@ -55,4 +55,34 @@ const deleteMany = async (ids) => {
   }
 };
 
-export const CardModel = { createNew, cardCollectionName, deleteMany };
+const update = async (id, data) => {
+  try {
+    const updateData = {
+      ...data,
+    };
+
+    if (data.boardId) {
+      updateData.boardId = ObjectID(data.boardId);
+    }
+
+    if (data.boardId) {
+      updateData.columnId = ObjectID(data.columnId);
+    }
+
+    const result = await getDB()
+      .collection(cardCollectionName)
+      .findOneAndUpdate(
+        {
+          _id: ObjectID(id),
+        },
+        { $set: updateData },
+        { returnOriginal: false }
+      );
+    console.log(result);
+    return result.value;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const CardModel = { cardCollectionName, createNew, deleteMany, update };
